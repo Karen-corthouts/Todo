@@ -4,7 +4,10 @@ const TodoItem = ({label, done}) => {
     const [isActive, setActive] = useState(done);
     
     const ToggleClass = () => {
+        console.log("before: " + isActive + " - " + done);
         setActive(!isActive);
+        done = isActive;
+        console.log("after: " + isActive + " - " + done);
     };
 
     
